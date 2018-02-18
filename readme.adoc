@@ -1,0 +1,253 @@
+== LİNUX İŞLETİM SİSTEMİ VE LİSANS TÜRLERİ
+
+
+====
+
+image::https://tr3.cbsistatic.com/hub/i/r/2016/06/02/e965310b-b38d-43e6-9eac-ea520992138b/resize/770x/8e291bfbf9962bd2bb3f256ef3c5f5c8/linuxadminhero.jpg[]
+====
+
+   
+
+.Linux ve Windows Arasındaki En Temel Farklar
+|===
+|Windows | Linux
+
+|Lisanslama kısıtlaması 
+|Lisanslama serbestisi
+
+
+|Kaynak Koduna Sıfır Erişim
+|Kaynak Koduna Tam Erişim
+
+|===
+
+[chart,pie,file="linuxkullanim.png",opt="title=İşletim Sistemleri Kullanım Oranları"]
+--
+Windows, 85.98, red
+Mac 0S X, 10.11,orange
+Other,  4.63, green
+Linux,  2.02, blue
+--
+ 
+
+
+video::zA3vmx0GaO8[youtube,width=500,height=400, start=0, options=autoplay]
+
+== Linux ile Bash Script Temelleri
+====
+Bash script sayesinde, sık sık karşılaşılan durumlar için kullanıcı müdahalesine gerek kalmadan işlemlerin otomatikleştirilmesi sağlanabilir. Her gün belli zamanlarda sisteminizin tüm dosyalarının kontrol edilerek içlerinden sadece bir önceki güne göre değişenlerin yedeğini alan bir program yazılabilir. Bu tür işlemleri her gün kullanıcı manuel olarak yapabileceği gibi bir programa da yaptırabilir.
+
+Böyle bir programı C, Python vb. Programlama dillerini kullanarak yazabilirsiniz. Bu durumda yazdığınız program, çalışmak için bir derleyiciye ihtiyaç duyacaktır. Bir script de aynı şekilde çalışmak için bir derleyiciye ihtiyaç duyar (bash shell). Biz örneklerimizde Bourne Again Shell (bash) kullanıyoruz.
+====
+[TIP]
+====
+[source,]
+----    
+----
+<1> Bir komut, shell içerisinde çalışıyorsa onu Script içerisine de yerleştirebilirsiniz.
+
+<2> Bir komut Script içerisine yerleştirilebiliyorsa, komut satırında da çalışıyor olmalıdır.
+----
+====
+
+.myscripst.sh
+[source,ruby]
+----
+#!/bin/bash
+# Basit bir Bash Script
+# Umut 10/05/2016
+echo İşte sizin Ev klasörünüzdeki dosyalar:
+ls ~
+chmod +x myscript.sh
+ls -l myscript.sh
+-rwxr-xr-x 1 umut umut 112 May 10 21:12 myscript.sh
+----
+ 
+= YAZILIM LİSANS TÜRLERİ
+
+
+
+    * *GNU Genel Kamu Lisansı (GPL)*
+
+    * *GNU Kısıtlı Genel Kamu Lisansı (LPGL)*
+
+    * *BSD Lisansı*
+
+    * *Shareware Lisansı*
+
+    * *Freeware Lisansı*
+    
+    * *GNU Affero Genel Kamu Lisansı*
+
+    * *Apache Lisansı*
+    
+    * *MIT Lisansı*
+
+== 1. GNU Genel Kamu Lisansı (GPL) 
+
+====
+Yazılım lisanslarının çoğu yazılımı paylaşma ve değiştirme hakkının elimizden alınması için hazırlanmıştır. Buna karşılık, *GNU Genel Kamu Lisansı*  serbest yazılımları değiştirme ve paylaşma hakkının mahfuz tutulması ve yazılımın bütün kullanıcılar için serbest olması amacı ile yazılmıştır. 
+
+Bu *Genel Kamu Lisansı*, Free Software Foundation'un çoğu yazılımı ve bu lisansı kullanmayı düstur edinen diğer yazılımcıların yazılımları için kullanılmaktadır. (Free Software Foundation'un bazı yazılımları *GNU Kitaplık Genel Kamu Lisansı -- GNU LGPL* altında dağıtılmaktadır.) 
+
+Siz de bu lisansı yazılımlarınıza uygulayabilirsiniz. Serbest yazılımdan bahsettiğimiz zaman fiyattan değil, özgürlükten bahsediyoruz.
+====
+
+*Genel Kamu Lisansları*, serbest yazılımların kopyalarını dağıtma özgürlüğünüzü (ve isterseniz bu hizmet için para almanızı), yazılım kaynak kodlarının size dağıtım esnasında veya eğer isterseniz verilmesini, yazılımı değiştirebilmenizi, yazılımın parçalarını yeni yazılımlar içerisinde kullanabilmenizi ve bunları yapabileceğinizi bilmenizi sağlamaktadır.
+
+
+*GNU Genel Kamu Lisansı (GNU GPL ya da GPL)* birçok yerde kullanılan, özgür bir yazılım lisansıdır ve özgün hali Richard Stallman tarafından GNU projesi için yazılmıştır.
+
+
+_GNU GPL çokça kullanılan bir lisans olup aşağıdakileri sağlar_:
+[TIP]
+====
+[source,]
+----
+----
+<1> Kopyalanabilir.
+
+<2> Dağıtılabilir.
+
+<3> İstenilen değişiklikler yapılabilir.
+
+<4> Yazılımın her yeni versiyonu bu lisansı kullanmak zorundadır.
+----
+----
+====
+== 2. GNU Kısıtlı Genel Kamu Lisansı (LPGL)
+
+====
+*LGPL (GNU Lesser General Public License)* veya bir başka deyişle *GNU Kısıtlı Genel Kamu Lisansı*, GPL bir kitaplığı kullanan bir eserin, GPL'deki şartları daraltıcı bir lisansa sahip olmaması zorunluluğunu taşımayan (yani GPL ozellikleri kısıtlı) büyük ölçüde pragmatik bir özgür lisans türüdür. 
+
+Özetle, *LGPL* seçiminin öncelikli amacı özgür yazılımın yaygınlığını artırmaktır. 
+====
+Ve bu yönüyle *LGPL* ' in  temelde pragmatik (faydacı) bir lisans türü olduğunu söyleyebiliriz. Şayet bu şartlar sağlanmıyorsa LGPL yerine daima GPL tercih edilmelidir, ki böylelikle özgür yazılımın cazibesi korunarak eserinizden yararlananların katkıları da yine GPL olarak geri dönsün.
+
+
+*LGPL* bir kitaplığı özgür olmayan ticari bir üründe, ürünün lisans şartlarını kendinize göre belirleyerek kullanabilirsiniz. Fakat yaptığınız bütün değişikliklerle birlikte eserin *LGPL* cüzünü yine LGPL olarak dağıtmak zorundasınız.
+
+[source,]
+----
+* GPL sözleşmeli bir yazılım, kaynak kodunu kullanan türevlerinin de GPL ile lisanslanmasını şart koşar. Yani GPL ile korunan bir yazılımın kodlarını, daha dar kapsamlı bir lisans sözleşmesine sahip bir yazılımın içinde asla sunamazsınız.
+
+* LGPL , ise ağırlıklı olarak kütüphanelerde kullanılan bir özgür yazılım lisansıdır. Mesela yaygınlaşmasını istediğiniz bir kütüphane ya da görüntü biçimimiz var. 
+Bu görüntü biçimini özgür olmayan yazılımlar içinde de kullanılabilmesini arzularsanız, LGPL ile lisanslayıp, kapalı kaynak kodlu bir yazılım içinde de kullanılabilmesini sağlayabilirsiniz. LGPL ile lisansladığınız kısmı ve o kısma yapılan yamalar yine LGPL ile lisanslanmalıdır.
+----
+
+== 3. BSD LİSANSI
+
+====
+*BSD lisansları* izin veren özgür yazılım lisansları ailesidir. Lisans ilk kez aynı isimdeki bir Unix Benzeri işletim sistemi olan *Berkeley Software Distribution (BSD)* tarafından kullanıldı.
+
+====
+[source,]
+----
+* Hiç kimse hiçbir kuruluş BSD’nin sahibi değildir.
+
+* BSD lisansı yazılım üzerine sınırlama getirmez.
+
+* BSD lisansıyla üretilen yazılımların giderleri kamu fonlarından karşılanır.
+
+* BSD lisansıyla üretilen yazılımların giderleri kamu fonlarından karşılandığı için yazılımların lisansları da kamu yani halka ait olmaktadır.
+
+* İsteyen herkes BSD lisanslı ürünleri kullanma hakkına sahiptir.
+
+* BSD lisanslı bir yazılımın kodlarında değişiklik yaparak ve kodları şifreleyerek ya da kapatarak yazılım piyasasında satışa sunabilme imkanına sahip olunabilir.
+
+
+----
+
+*BSD'nin* ilk sahipleri Regents of the University of California'dır, çünkü *BSD* ilk defa Kaliforniya Üniversitesi, Berkeley'de yazılmıştır. Lisansın ilk versiyonu daha sonra gözden geçirilmiş, ve sonuç olarak çıkan lisanslara değiştirilmiş *BSD lisansları* denmiştir.
+
+_Lisansın iki farklı biçimi_ :
+[TIP]
+====
+[source,]
+----
+----
+<1> Yeni BSD Lisansı/Değiştirilmiş BSD Lisansı
+<2> Sadeleştirilmiş BSD Lisansı/FreeBSD Lisansı
+----
+----
+====
+Özgür Yazılım Vakfı tarafından GPL-uyumlu özgür yazılım lisansı olarak kabul edilmiş, ve Open Source Initiative tarafından da açık kaynak lisansı olarak incelenmiş ve orijinal lisans FSF tarafından özgür yazılım lisansı olarak kabul edilmişse de GPL ile uyumlu olmadığı belirtilmiştir, açık kaynak lisansı olarak kabul edilmemiştir.
+ 
+== 4. SHAREWARE LİSANSI
+
+====
+*Shareware (kısıtlı yazılım)*, kullanıcının programı tanımasını sağlayan, zaman ve özellik bakımından kısıtlı sürüme verilen addır. Kullanıcıların İnternet'i en yoğun kullandığı alanlardan biri ücretsiz programlar edinmektir. 
+====
+
+Çeşitli *shareware* ve download arşivlerinde bulunabilecek bu tür programlar kullanım biçimleri açısından farklı sınıflara ayrılabilir. Örneğin, bazı programcılar ya da yazılım şirketleri tarafından tüm kullanıcılara sunulan ücretsiz programlar ücretsiz sahipli yazılım (freeware) olarak adlandırılmaktadır.
+
+[source,]
+----
+* Belirli bir süre (15 gün, 30 gün vb.) kullanım izni olan programlara *shareware* adı verilir. Bunların bir bölümü bu süre bitiminde kullanılamaz duruma gelir. Bazıları ise kullanılabilmakte ancak bazı özellikleri işlevsizleşmektedir.
+
+ * *Shareware* ile çok benzer olan, ancak kaydetme gibi yaşamsal özellikleri kısıtlanmış programlara ise genelde demo adı verilmektedir. Uzun süre önce üretilmiş ve artık gözden düşmüş bazı yazılımlar üreticisi tarafından artık ücretsiz sunuluyorsa buna da abandonware adı verilir. Ne var ki, shareware daha çok kullanılan bir ad olduğundan her tür ücretsiz yazılımın bulunduğu sitelere *Shareware arşivi* denilmektedir.
+ 
+----
+ 
+== 5. FREEWARE LİSANSI
+====
+*Ücretsiz sahipli yazılım (İngilizce Freeware)* ücretsiz olarak herhangi bir özellik ve süre kısıtlaması olmadan kullanılabilen, sahipli (özgür olmayan) bir lisans ile lisanslı yazılımlara verilen genel addır. 
+====
+
+[source,]
+----
+* Kullanıcının belirli bir süre sonra yazılımı kullanmaya devam etmek için ücret ödemek durumunda olduğu sharewareden farklı olarak tamamen ücretsizdir. Terimin kabul edilmiş açık bir tanımı yoktur.
+
+* Bu tür yazılım lisansları, yazılımın bireysel kullanıcıların ücretsiz olarak kullanılmasına imkan verirken, ticari kullanım için üreticisinden izin istenilmesi ve ücret ödenmesi gibi hükümler barındırabilir.
+
+----
+
+== 6. GNU AFFERO GENEL KAMU LİSANSI
+====
+*GNU Affero Genel Kamu Lisansı (GNU AGPL ya da AGPL)*, Özgür Yazılım Vakfı tarafından yayımlanan bir özgür lisans modelidir. GNU Genel Kamu Lisansı ile neredeyse aynı olan AGPL, ağ ortamında kullanılan web hizmetlerini kapsayıcı bir bir ek madde içerir.
+====
+
+.NOT
+NOTE: Lisansın en son sürümü *(AGPL sürüm 3)*, 19 Kasım 2007'de yayınlanmıştır.
+ ek madde içerir.
+
+====
+Özgür Yazılım Vakfı, *AGPLv1'in* özel olarak karşıladığını, *GPLv3* içerisinde kapsamak için kafa yormaya başladı ama sonunda, ayrı bir lisans yayınlamaya karar verdiler ki bu lisans, *GPLv30* ile özdeş olacak ancak *AGPLv1'in* bir kısmının sonuçta karşılamak istediği amaca yakın bir amaç güdecekti. Böylece yeni lisans *GNU Affero Genel Kamu Lisansı* olarak isimlendirildi. *Affero* adının korunmasının nedeni ise, Affero'nun *AGPLv1* ile tarihi yakınlığından kaynaklanmaktadır. *GNU AGPL'in* sürüm numarası, *GPL'in* sürüm numarasıyla eşit olarak verildi ve bugün kullanılan *GNU Affero Genel Kamu Lisans'ı , AGPLv3* olarak kısaltılmaktadır.
+====
+
+== 7. APACHE LİSANSI
+
+[TIP]
+====
+
+*Apache Lisansı* (2.0 sürümünden önce Apache Yazılım Lisansı olarak adlandırılmaktaydı), *Apache Yazılım Vakfı (ASF)* tarafından yayımlanan bir özgür yazılım lisansıdır. Apache Lisansı (1.0, 1.1 ve 2.0 sürümleri) telif hakkı koruma ve feragat uyarısı gerektirmektedir ancak telif feragatlı bir lisans değildir. Lisans, özgür ve açık kaynak kodlu yazılımın geliştirilmesi için kaynak kodlarının kullanımına izin vermektedir.
+====
+=====
+*ASF* tarafından üretilen ya da onun herhangi bir tasarısının ürünü olan tüm yazılımlar, Apache Lisansı koşullarına göre lisanslanmaktadır. ASF tarafından üretilmeyen yazılımlar da zaman zaman bu lisansı kullanabilmektedir. Nisan 2008'de SourceForge.net'te yer alan 3000'i aşkın tasarı, Apache Lisansı'nın tüm koşullarıyla uyum içindedir.
+=====
+== 8. MIT LİSANSI
+
+====
+*MIT Lisansı*, 1988 yılında Massachusetts Teknoloji Enstitüsü tarafından hazırlanmış, en yaygın kullanılan özgür yazılım lisanslarından biridir.
+====
+.NOT
+NOTE: *MIT Lisansı* ile yayınlanan kodların sahipli yazılımlarda kullanılmasına, o yazılımın da lisansı dağıtması durumunda olanak verir.
+Ayrıca GPL ile uyumludur. Bir başka deyişle, GPL lisanslı bir yazılımla *MIT lisanslı* bir yazılımın kodları birlikte kullanılabilir ve dağıtılabilir.
+====
+*MIT Lisansı*, GPL dışında, Açık Kaynak İnisiyatifi standartlarına ve Debian Özgür Yazılım Yönergeleri'yle de uyumludur. Telif feragatlı değildir.
+====
+
+
+== Kullandığım  Bazı Linkler
+
+
+
+link:\\https://seminer.linux.org.tr/wp-content/uploads/ozguryazilimlisanslari.pdf[Yazılım Lisanları]
+
+https://linux.org.tr/linux-nedir/[Linux Nedir?]
+
+http://ozgurlisanslar.org.tr/[Özgür Yazılım Lisansları]
+
+http://www.wiki-zero.com/index.php?q=aHR0cHM6Ly90ci53aWtpcGVkaWEub3JnL3dpa2kvWWF6xLFsxLFtX2xpc2Fuc8Sx[Yazılım Lisansı]
+
+
