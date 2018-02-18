@@ -13,7 +13,7 @@ image::https://tr3.cbsistatic.com/hub/i/r/2016/06/02/e965310b-b38d-43e6-9eac-ea5
 |Windows | Linux
 
 |Lisanslama kısıtlaması 
-|Lisanslama serbestisi
+|Lisanslama serbestliği
 
 
 |Kaynak Koduna Sıfır Erişim
